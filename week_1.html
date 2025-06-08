@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Research SEO Course: Week 1 - Industry Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to bottom right, #e0f2f7, #f2f2f2);
+        min-height: 100vh;
+        padding-top: 80px; /* Space for fixed navbar */
+        display: flex;
+        flex-direction: column;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 350px;
+        }
+      }
+      .navbar-link.active {
+        background-color: #0077c0;
+        color: #e0f2f7;
+        box-shadow: 0 4px 10px rgba(0, 119, 192, 0.4);
+      }
+      #content-area {
+        flex-grow: 1; /* Allows content to push footer down */
+      }
+    </style>
+  </head>
+  <body class="text-[#333333]">
+    <nav
+      class="fixed top-0 left-0 right-0 bg-white shadow-md p-4 flex justify-center items-center z-50"
+    >
+      <div class="flex space-x-4 md:space-x-8">
+        <a
+          href="week_1.html"
+          data-week="1"
+          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
+          >Week 1: SEO Analysis</a
+        >
+        <a
+          href="week_2.html"
+          data-week="2"
+          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
+          >Week 2: Content Strategy</a
+        >
+        <a
+          href="week_3.html"
+          data-week="3"
+          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
+          >Week 3: Technical SEO</a
+        >
+        <a
+          href="week_4.html"
+          data-week="4"
+          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
+          >Week 4: Advanced Tactics</a
+        >
+      </div>
+    </nav>
+
+    <div id="content-area" class="container mx-auto p-4 md:p-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-black text-[#005082] mb-2">
+          SEO Industry Analysis
+        </h1>
+        <p class="text-lg md:text-xl font-light text-gray-600 mb-6">
+          A Deep Research Report on Market Dynamics & Core Strategies
+        </p>
+        <a
+          href="#workflow"
+          class="inline-block px-8 py-3 rounded-full font-bold text-white shadow-lg bg-gradient-to-r from-[#00A1E4] to-[#005082] hover:from-[#005082] hover:to-[#00A1E4] transform hover:-translate-y-1 transition duration-300 ease-in-out"
+        >
+          Explore The Workflow
+        </a>
+      </header>
+
+      <section id="how-search-works" class="mb-16">
+        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+          <h2 class="text-3xl font-bold text-[#0077C0] mb-4 text-center">
+            How Search Engines Dominate the Digital Market
+          </h2>
+          <p class="text-base text-gray-600 mb-8 max-w-3xl mx-auto text-center">
+            To understand the SEO market, we must first analyze the fundamental
+            process by which search engines operate. It all begins with a user's
+            search query, and how their browser transmits this request. This
+            initiates a complex, multi-stage mechanism within the search engine
+            itself—Indexing, Crawling, and Ranking—which forms the basis of all
+            organic search visibility. For a comprehensive overview, see the
+            <a
+              href="https://developers.google.com/search/docs/fundamentals/how-search-works"
+              class="text-[#00A1E4] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Google Search Works documentation</a
+            >
+            and the "<a
+              href="https://youtu.be/5MIAugQ17ks"
+              class="text-[#00A1E4] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >How Search Works: Intro</a
+            >" video.
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 mb-8"
+          >
+            <div class="text-center flex-1">
+              <div class="p-6 bg-[#F2F2F2] rounded-lg border border-gray-200">
+                <span class="text-4xl">⌨️</span>
+                <h3 class="text-xl font-bold mt-2 text-[#005082]">
+                  0. User Query & Browser
+                </h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  User types query; browser sends request & prepares to render
+                  results.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8"
+          >
+            <div class="text-center flex-1">
+              <div class="p-6 bg-[#F2F2F2] rounded-lg border border-gray-200">
+                <span class="text-4xl">🗂️</span>
+                <h3 class="text-xl font-bold mt-2 text-[#005082]">
+                  1. Indexing
+                </h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  Storing & organizing content in Google's massive database (the
+                  index). For details, see "<a
+                    href="https://youtu.be/pe-NSvBTg2o"
+                    class="text-[#00A1E4] hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >How Search Works: Indexing</a
+                  >" video.
+                </p>
+              </div>
+            </div>
+            <div class="text-4xl font-light text-[#00A1E4] hidden md:block">
+              ←
+            </div>
+            <div class="text-4xl font-light text-[#00A1E4] md:hidden">↑</div>
+            <div class="text-center flex-1">
+              <div class="p-6 bg-[#F2F2F2] rounded-lg border border-gray-200">
+                <span class="text-4xl">🤖</span>
+                <h3 class="text-xl font-bold mt-2 text-[#005082]">
+                  2. Crawling
+                </h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  Discovery of new & updated content via automated bots
+                  (spiders). For details, see "<a
+                    href="https://youtu.be/JuK7NnfyEuc"
+                    class="text-[#00A1E4] hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >How Search Works: Crawling</a
+                  >" video.
+                </p>
+              </div>
+            </div>
+            <div class="text-4xl font-light text-[#00A1E4] hidden md:block">
+              →
+            </div>
+            <div class="text-4xl font-light text-[#00A1E4] md:hidden">↓</div>
+            <div class="text-center flex-1">
+              <div class="p-6 bg-[#F2F2F2] rounded-lg border border-gray-200">
+                <span class="text-4xl">🏆</span>
+                <h3 class="text-xl font-bold mt-2 text-[#005082]">
+                  3. Ranking
+                </h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  Serving most relevant results from the index for a user's
+                  query. For details, see "<a
+                    href="https://youtu.be/lgQazesEjO4"
+                    class="text-[#00A1E4] hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >How Search Works: Serving & Ranking</a
+                  >" video.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-seo-matters" class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-[#0077C0] mb-4">
+              Market Opportunity Analysis
+            </h2>
+            <p class="text-base text-gray-600 mb-6">
+              The value of SEO is directly correlated with user behavior. A
+              commanding majority of all web traffic originates from search
+              engines, and market data indicates a steep drop-off in user
+              engagement beyond the first few search results. This creates a
+              highly competitive, high-stakes market for top positions.
+              Understand why you need SEO with
+              <a
+                href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+                class="text-[#00A1E4] hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google's official guide</a
+              >.
+            </p>
+            <div class="text-center bg-[#005082] text-white p-8 rounded-lg">
+              <span class="text-6xl md:text-8xl font-black block">91.5%</span>
+              <span class="text-lg font-light mt-2 block"
+                >of traffic share is captured by results on Page 1 of
+                Google.</span
+              >
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h3 class="text-xl font-bold text-[#005082] mb-2 text-center">
+              Click-Through Rate (CTR) Distribution
+            </h3>
+            <p class="text-sm text-gray-500 text-center mb-4">
+              This chart visualizes the dramatic decline in user clicks for
+              lower-ranked positions. Being on the first page is critical, but
+              being in the top 3 is transformative.
+            </p>
+            <div class="chart-container h-80 md:h-96">
+              <canvas id="ctrChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pillars-of-seo" class="mb-16">
+        <h2 class="text-3xl font-bold text-[#0077C0] mb-8 text-center">
+          The Four Pillars of SEO Success: A Competitive Framework
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-[#005082] mb-2">
+              Pillar 1: Content Quality
+            </h3>
+            <p class="text-base text-gray-600 mb-6">
+              Content remains the primary driver of value. Our analysis shows
+              that high-ranking content consistently scores well across several
+              key attributes. This bar chart compares the relative importance of
+              these attributes as determined by search engine algorithms. Learn
+              more about creating valuable content with
+              <a
+                href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+                class="text-[#00A1E4] hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google's helpful content guide</a
+              >.
+            </p>
+            <div class="chart-container">
+              <canvas id="contentChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-[#005082] mb-2">
+              Pillar 2: On-Page SEO
+            </h3>
+            <p class="text-base text-gray-600 mb-6">
+              On-Page SEO refers to optimizations made *directly on your
+              website* to improve its search engine ranking. These elements
+              function as primary signals to search engines about your page's
+              relevance and topic, representing a low-effort, high-impact tactic
+              with direct control. For more on how these appear in search
+              results, see the "<a
+                href="https://youtu.be/IosyvXjQvlw"
+                class="text-[#00A1E4] hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                >How Search Works: Anatomy of a Search Result</a
+              >" video.
+            </p>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-[#0077C0]">Page Title</h4>
+                <p class="text-sm text-gray-500">
+                  <b class="text-green-600">Good:</b> Vegan Chocolate Raspberry
+                  Cupcakes | SweetBlissBakes.ca
+                </p>
+                <p class="text-sm text-gray-500">
+                  <b class="text-red-600">Bad:</b> New Product Page
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#0077C0]">Meta Description</h4>
+                <p class="text-sm text-gray-500">
+                  <b class="text-green-600">Good:</b> Rich, decadent vegan
+                  chocolate raspberry cupcakes, baked fresh in Surrey. Order
+                  online for local delivery!
+                </p>
+                <p class="text-sm text-gray-500">
+                  <b class="text-red-600">Bad:</b> Our new vegan cupcakes are
+                  here. Made with chocolate and raspberries.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#0077C0]">URL</h4>
+                <p class="text-sm text-gray-500">
+                  <b class="text-green-600">Good:</b>
+                  /vegan-chocolate-raspberry-cupcakes
+                </p>
+                <p class="text-sm text-gray-500">
+                  <b class="text-red-600">Bad:</b> /prod_id=881?cat=vegan
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-[#005082] mb-2">
+              Pillar 3: Technical Health
+            </h3>
+            <p class="text-base text-gray-600 mb-6">
+              A technically sound website provides a superior user experience,
+              which is a significant factor in ranking algorithms. This radar
+              chart illustrates a health profile of a well-optimized site across
+              key technical metrics, ensuring accessibility for both users and
+              search engine crawlers.
+            </p>
+            <div class="chart-container">
+              <canvas id="technicalChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-[#005082] mb-2">
+              Pillar 4: Off-Page SEO & Authority
+            </h3>
+            <p class="text-base text-gray-600 mb-6">
+              Off-Page SEO encompasses all activities done *outside your
+              website* to improve its search engine ranking. The most
+              significant component is building authority through quality
+              backlinks. These external endorsements act as "votes of
+              confidence" from other reputable sites, signaling trust and
+              relevance to search engines. This bubble chart visualizes the
+              relative impact and common sources of these crucial external
+              endorsements. The 'Impact Radius' (size of bubble) represents the
+              influence and trust value passed from the linking site to your
+              domain, with higher radius indicating greater authority transfer,
+              leading to improved domain authority and ultimately higher
+              rankings.
+            </p>
+            <div class="chart-container">
+              <canvas id="backlinksChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" class="mb-16">
+        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+          <h2 class="text-3xl font-bold text-[#0077C0] mb-4 text-center">
+            The SEO Workflow: A Cyclical Process for Market Dominance
+          </h2>
+          <p class="text-base text-gray-600 mb-8 max-w-3xl mx-auto text-center">
+            Successful SEO is not a one-time project but a continuous cycle of
+            research, implementation, and analysis. This process ensures
+            adaptation to changing market conditions and algorithm updates. For
+            a complete guide to SEO, refer to the
+            <a
+              href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+              class="text-[#00A1E4] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Google SEO Starter Guide</a
+            >.
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <div class="text-center p-4 bg-[#F2F2F2] rounded-lg flex-1">
+              <h3 class="font-bold text-[#005082]">Research</h3>
+              <p class="text-xs text-gray-500">Keywords, Competitors</p>
+            </div>
+            <div class="text-2xl font-light text-[#00A1E4]">→</div>
+            <div class="text-center p-4 bg-[#F2F2F2] rounded-lg flex-1">
+              <h3 class="font-bold text-[#005082]">Create</h3>
+              <p class="text-xs text-gray-500">Helpful, Engaging Content</p>
+            </div>
+            <div class="text-2xl font-light text-[#00A1E4]">→</div>
+            <div class="text-center p-4 bg-[#F2F2F2] rounded-lg flex-1">
+              <h3 class="font-bold text-[#005082]">Optimize</h3>
+              <p class="text-xs text-gray-500">On-Page & Technical</p>
+            </div>
+            <div class="text-2xl font-light text-[#00A1E4]">→</div>
+            <div class="text-center p-4 bg-[#F2F2F2] rounded-lg flex-1">
+              <h3 class="font-bold text-[#005082]">Analyze</h3>
+              <p class="text-xs text-gray-500">Rankings, Traffic, CTR</p>
+            </div>
+            <div
+              class="text-2xl font-light text-[#00A1E4] transform rotate-90 md:rotate-0"
+            >
+              ⤵
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center pt-8 border-t border-gray-300 mt-auto">
+        <p class="text-sm text-gray-500">
+          &copy; <span id="current-year"></span> All Rights Reserved. This
+          infographic is for informational purposes only.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      const brilliantBlues = {
+        primary: "#00A1E4",
+        secondary: "#0077C0",
+        tertiary: "#005082",
+        light: "#F2F2F2",
+        dark: "#333333",
+      };
+
+      const chartTooltip = {
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: function (tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(" ");
+                } else {
+                  return label;
+                }
+              },
+            },
+          },
+        },
+      };
+
+      function wrapLabel(label, maxLength = 16) {
+        if (label.length <= maxLength) {
+          return label;
+        }
+        const words = label.split(" ");
+        const lines = [];
+        let currentLine = "";
+        words.forEach((word) => {
+          if ((currentLine + " " + word).trim().length > maxLength) {
+            lines.push(currentLine.trim());
+            currentLine = word;
+          } else {
+            currentLine += " " + word;
+          }
+        });
+        lines.push(currentLine.trim());
+        return lines;
+      }
+
+      function initWeek1Charts() {
+        new Chart(document.getElementById("ctrChart"), {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Position 1",
+              "Position 2",
+              "Position 3",
+              "Positions 4-5",
+              "Positions 6-10",
+            ],
+            datasets: [
+              {
+                label: "CTR by Position",
+                data: [28.5, 15.7, 11.0, 15.3, 29.5],
+                backgroundColor: [
+                  brilliantBlues.primary,
+                  brilliantBlues.secondary,
+                  brilliantBlues.tertiary,
+                  "#6abde9",
+                  "#94d2f0",
+                ],
+                borderColor: brilliantBlues.light,
+                borderWidth: 3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            ...chartTooltip,
+          },
+        });
+
+        new Chart(document.getElementById("contentChart"), {
+          type: "bar",
+          data: {
+            labels: [
+              "Relevance to Query",
+              "Content Depth & Accuracy",
+              "Readability & Structure",
+              "Uniqueness of Information",
+              "Use of Engaging Media",
+            ].map((l) => wrapLabel(l)),
+            datasets: [
+              {
+                label: "Attribute Importance Score",
+                data: [95, 92, 85, 80, 70],
+                backgroundColor: brilliantBlues.secondary,
+                borderColor: brilliantBlues.tertiary,
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: "y",
+            scales: {
+              x: {
+                beginAtZero: true,
+                max: 100,
+              },
+            },
+            ...chartTooltip,
+          },
+        });
+
+        new Chart(document.getElementById("technicalChart"), {
+          type: "radar",
+          data: {
+            labels: [
+              "Mobile-Friendly",
+              "Site Speed (Performance)",
+              "Security (HTTPS)",
+              "Clean URLs",
+              "Crawlability",
+            ],
+            datasets: [
+              {
+                label: "Well-Optimized Site Profile",
+                data: [95, 85, 100, 90, 98],
+                fill: true,
+                backgroundColor: "rgba(0, 161, 228, 0.2)",
+                borderColor: brilliantBlues.primary,
+                pointBackgroundColor: brilliantBlues.primary,
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: brilliantBlues.primary,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              r: {
+                angleLines: {
+                  color: "#e0e0e0",
+                },
+                grid: {
+                  color: "#e0e0e0",
+                },
+                pointLabels: {
+                  font: {
+                    size: 12,
+                  },
+                  color: brilliantBlues.dark,
+                },
+                ticks: {
+                  backdropColor: brilliantBlues.light,
+                  color: "#666",
+                },
+                suggestedMin: 0,
+                suggestedMax: 100,
+              },
+            },
+            ...chartTooltip,
+          },
+        });
+
+        new Chart(document.getElementById("backlinksChart"), {
+          type: "bubble",
+          data: {
+            datasets: [
+              {
+                label: "Major News Outlet",
+                data: [{ x: 20, y: 30, r: 25 }],
+                backgroundColor: brilliantBlues.primary,
+              },
+              {
+                label: "Industry-Specific Blog",
+                data: [{ x: 40, y: 60, r: 20 }],
+                backgroundColor: brilliantBlues.secondary,
+              },
+              {
+                label: "Local Business Directory",
+                data: [{ x: 60, y: 20, r: 12 }],
+                backgroundColor: "#6abde9",
+              },
+              {
+                label: "Forum/Social Media",
+                data: [{ x: 80, y: 70, r: 5 }],
+                backgroundColor: "#94d2f0",
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return (
+                      context.dataset.label +
+                      ": Authority/Impact Radius " +
+                      context.raw.r
+                    );
+                  },
+                },
+              },
+            },
+            scales: {
+              x: { display: false },
+              y: { display: false },
+            },
+          },
+        });
+      }
+
+      // Script for navbar active state and footer year
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname.split("/").pop(); // Get filename
+        const navLinks = document.querySelectorAll(".navbar-link");
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPath) {
+            link.classList.add("active");
+          } else if (currentPath === "" && linkHref === "week_1.html") {
+            // Handle index.html default to week_1
+            link.classList.add("active");
+          }
+        });
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        // Initialize charts if this is week_1.html
+        if (currentPath === "week_1.html") {
+          initWeek1Charts();
+        }
+      });
+    </script>
+  </body>
+</html>
