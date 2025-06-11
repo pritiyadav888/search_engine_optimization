@@ -3,106 +3,691 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deep Research SEO Course: Week 2 - Content Strategy</title>
+    <title>Foundations of SEO: An Interactive Infographic</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background: linear-gradient(to bottom right, #e0f2f7, #f2f2f2);
-        min-height: 100vh;
-        padding-top: 80px; /* Space for fixed navbar */
-        display: flex;
-        flex-direction: column;
       }
-      .navbar-link.active {
-        background-color: #0077c0;
-        color: #e0f2f7;
-        box-shadow: 0 4px 10px rgba(0, 119, 192, 0.4);
+      .chart-container {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        height: 320px;
+        width: 100%;
+        max-width: 600px;
       }
-      #main-content {
-        flex-grow: 1; /* Allows content to push footer down */
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 400px;
+        }
+      }
+      .flowchart-item {
+        border: 2px solid #e5e7eb;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        background-color: #f9fafb;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+      .flowchart-arrow {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #9ca3af;
+        margin: 0.5rem 0;
+      }
+      .pyramid-level {
+        display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 2rem;
+        color: white;
+        font-weight: bold;
+        clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
       }
     </style>
   </head>
-  <body class="text-[#333333]">
-    <nav
-      class="fixed top-0 left-0 right-0 bg-white shadow-md p-4 flex justify-center items-center z-50"
-    >
-      <div class="flex space-x-4 md:space-x-8">
-        <a
-          href="week_1.html"
-          data-week="1"
-          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
-          >Week 1: SEO Analysis</a
-        >
-        <a
-          href="week_2.html"
-          data-week="2"
-          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
-          >Week 2: Content Strategy</a
-        >
-        <a
-          href="week_3.html"
-          data-week="3"
-          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
-          >Week 3: Technical SEO</a
-        >
-        <a
-          href="week_4.html"
-          data-week="4"
-          class="navbar-link px-4 py-2 rounded-full font-semibold text-[#005082] hover:bg-gray-100 transition duration-200"
-          >Week 4: Advanced Tactics</a
-        >
-      </div>
-    </nav>
-
-    <div id="main-content" class="container mx-auto">
-      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 max-w-3xl">
-        <h2 class="text-4xl font-bold text-[#0077C0] mb-4">
-          Week 2: Content Strategy & Keyword Research
-        </h2>
-        <p class="text-lg text-gray-600 mb-8">
-          Content for this week is currently under development. Please check
-          back soon for advanced keyword research techniques, content planning,
-          and strategies for creating compelling, user-centric content that also
-          ranks well on search engines!
+  <body class="bg-gray-50 text-gray-800">
+    <main class="container mx-auto p-4 md:p-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-2">
+          Foundations of SEO
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600">
+          Understanding the Building Blocks of Modern Search
         </p>
-      </div>
-    </div>
+      </header>
 
-    <footer class="text-center pt-8 pb-4 border-t border-gray-300 mt-auto">
-      <p class="text-sm text-gray-500">
-        &copy; <span id="current-year"></span> All Rights Reserved. This course
-        material is for informational purposes only.
-      </p>
-    </footer>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8 md:col-span-2">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            Keywords & Search Terms: The User's Voice
+          </h2>
+          <p class="mb-6 text-gray-600">
+            The foundation of all SEO begins with keywords, but it's evolved far
+            beyond simple phrases. Success now hinges on understanding user
+            intent—the *why* behind a search. Are users looking to learn
+            something, make a purchase, or find a specific website? This
+            understanding shapes your entire content strategy and determines
+            whether you attract the right audience or miss out on valuable,
+            high-conversion traffic.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="font-bold text-lg mb-2 text-center text-[#232628]">
+                The Four Pillars of Search Intent
+              </h3>
+              <div class="chart-container h-80 md:h-96">
+                <canvas id="intentChart"></canvas>
+              </div>
+              <p class="mt-4 text-sm text-gray-500 text-center">
+                This chart illustrates a typical breakdown of user search
+                intent. A significant portion of searches are informational,
+                highlighting the importance of content that educates and answers
+                questions.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg mb-4 text-[#232628]">
+                The Impact of Keyword Choices
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span class="text-xl mr-3 text-[#DC493A]">🔴</span>
+                  <strong>Irrelevant Keywords:</strong> Attract the wrong
+                  audience, leading to high bounce rates and low engagement.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-xl mr-3 text-[#FECD1A]">🟡</span>
+                  <strong>Skipping Long-Tail:</strong> Miss out on highly
+                  specific, high-conversion traffic from users who know exactly
+                  what they want.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-xl mr-3 text-[#00A6FB]">🔵</span>
+                  <strong>Ignoring Conversational Queries:</strong> Underperform
+                  in AI-driven search like SGE and voice assistants, which
+                  prioritize natural language answers.
+                </li>
+              </ul>
+              <div
+                class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg"
+              >
+                <h4 class="font-bold text-[#00A6FB]">
+                  AI-Optimized Search Context
+                </h4>
+                <p class="text-sm text-blue-800 mt-2">
+                  <strong>GEO (Generative Engine Optimization):</strong> Focus
+                  on clear, structured content that directly answers questions
+                  to be featured in AI summaries.
+                  <strong>AEO (Answer Engine Optimization):</strong> Prepare
+                  content to answer "who/what/when/how" to become eligible for
+                  voice search and featured snippets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            URL & Site Architecture: Your Website's Blueprint
+          </h2>
+          <p class="mb-6 text-gray-600">
+            A website's structure is its map for both users and search engine
+            crawlers. A logical, clean architecture with SEO-friendly URLs
+            ensures easy navigation, builds trust, and allows search engines to
+            efficiently discover and index your content. Neglecting this
+            foundation can lead to user frustration and poor search visibility.
+          </p>
+          <h3 class="font-bold text-lg mb-2 text-center text-[#232628]">
+            An Ideal Site Hierarchy
+          </h3>
+          <div class="mt-4">
+            <div class="flowchart-item w-3/4 mx-auto">Homepage</div>
+            <div class="flowchart-arrow">↓</div>
+            <div class="flowchart-item w-5/6 mx-auto">Category Page</div>
+            <div class="flowchart-arrow">↓</div>
+            <div class="flowchart-item w-full mx-auto">Subpage / Product</div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500 text-center">
+            This flowchart represents a clear, logical site architecture.
+            Keeping important content within 3 clicks of the homepage is a key
+            principle for both user experience and efficient search engine
+            crawling.
+          </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            What Makes a URL SEO-Friendly?
+          </h2>
+          <p class="mb-6 text-gray-600">
+            The URL is often the first element a user sees. It must be clear,
+            descriptive, and trustworthy.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <span class="text-xl mr-3 text-[#34A65F]">✅</span>
+              <strong>Clear & Descriptive:</strong> Gives a clue about the page
+              content.
+            </li>
+            <li class="flex items-center">
+              <span class="text-xl mr-3 text-[#34A65F]">✅</span>
+              <strong>Keyword-Rich:</strong> Includes relevant terms to improve
+              ranking.
+            </li>
+            <li class="flex items-center">
+              <span class="text-xl mr-3 text-[#34A65F]">✅</span>
+              <strong>Simple Format:</strong> Uses lowercase and hyphens, not
+              underscores or symbols.
+            </li>
+          </ul>
+          <div class="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <h4 class="font-bold text-[#DC493A]">Consequences of Poor URLs</h4>
+            <ul
+              class="space-y-2 mt-2 list-disc list-inside text-sm text-red-800"
+            >
+              <li>Users don't trust or click vague URLs.</li>
+              <li>Search engines might fail to index the page correctly.</li>
+              <li>
+                Your page may compete with duplicate or parameterized versions.
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 p-4 bg-gray-100 border border-gray-200 rounded-lg">
+            <h4 class="font-bold text-gray-800 flex items-center">
+              🔒 HTTPS: The Trust Signal
+            </h4>
+            <p class="text-sm text-gray-600 mt-2">
+              A secure site (HTTPS) is non-negotiable. It builds user trust, is
+              required for e-commerce, and prevents browsers from flagging your
+              site as "Not Secure."
+            </p>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            Page Structure: Content's Identity Card
+          </h2>
+          <p class="mb-6 text-gray-600">
+            Think of your webpage like a newspaper article. HTML tags like
+            headings (H1, H2) and meta tags provide the structure that search
+            engines need to understand your content's hierarchy and relevance,
+            directly impacting both SEO and accessibility.
+          </p>
+          <h3 class="font-bold text-lg mb-2 text-center text-[#232628]">
+            The Heading Tag Hierarchy
+          </h3>
+          <div class="w-full max-w-sm mx-auto space-y-1 mt-4">
+            <div
+              class="pyramid-level mx-auto"
+              style="width: 100%; background-color: #232628"
+            >
+              H1: Main Title
+            </div>
+            <div
+              class="pyramid-level mx-auto"
+              style="width: 90%; background-color: #00a6fb"
+            >
+              H2: Main Section
+            </div>
+            <div
+              class="pyramid-level mx-auto"
+              style="width: 80%; background-color: #34a65f"
+            >
+              H3: Sub-section
+            </div>
+            <div
+              class="pyramid-level mx-auto"
+              style="width: 70%; background-color: #fecd1a; color: #232628"
+            >
+              H4: Sub-sub-section
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500 text-center">
+            This pyramid demonstrates the correct use of heading tags. There
+            should be only one H1 per page, with subsequent headings used to
+            logically structure the content underneath it.
+          </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            Meta Tags & Alt Text
+          </h2>
+          <p class="mb-6 text-gray-600">
+            These elements are your chance to advertise your content on search
+            result pages and make your images discoverable and accessible.
+          </p>
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-bold text-lg text-[#232628]">
+                Meta Tags: Your Search Billboard
+              </h4>
+              <div class="mt-2 border rounded-lg p-4 bg-gray-50">
+                <p class="text-blue-600 text-lg font-medium">
+                  Top Budget Laptops 2025 | Student Tech Guide
+                </p>
+                <p class="text-green-700 text-sm">
+                  https://example.com/blog/best-laptops-2025
+                </p>
+                <p class="text-gray-600 mt-1">
+                  This is the meta description: a short summary (<160
+                  characters) shown under the title. It should include a
+                  compelling call-to-action to encourage clicks.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-[#232628]">
+                Alt Text: Describe to Discover
+              </h4>
+              <p class="text-gray-600 mt-1">
+                Alt text describes what's in an image for screen readers and
+                search bots. This is crucial for accessibility and helps your
+                images rank in image search. A good example:
+                <span class="italic text-blue-600"
+                  >"Girl studying with a laptop on college campus."</span
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8 md:col-span-2">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            The SEO Audit: A Health Check-Up
+          </h2>
+          <p class="mb-6 text-gray-600">
+            An SEO audit is a systematic process of identifying technical
+            issues, on-page problems, and content gaps that could be harming
+            your search performance. It reveals what's working, what's broken,
+            and where the biggest opportunities for improvement lie.
+            Understanding common audit findings helps prioritize your SEO
+            efforts.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="font-bold text-lg mb-2 text-center text-[#232628]">
+                Common SEO Audit Issues
+              </h3>
+              <div class="chart-container h-80 md:h-96">
+                <canvas id="auditChart"></canvas>
+              </div>
+              <p class="mt-4 text-sm text-gray-500 text-center">
+                This chart shows a hypothetical breakdown of common issues found
+                during an SEO audit. Technical elements like broken links and
+                missing image alt text are frequent and can significantly impact
+                user experience and crawlability.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg mb-4 text-[#232628]">
+                Key Audit Checklist
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <span class="text-xl mr-3">🔗</span>
+                  <strong>SEO-Friendly URLs:</strong> Are they clean, short, and
+                  keyword-rich?
+                </li>
+                <li class="flex items-center">
+                  <span class="text-xl mr-3">🔒</span>
+                  <strong>HTTPS:</strong> Is the secure padlock present on all
+                  pages?
+                </li>
+                <li class="flex items-center">
+                  <span class="text-xl mr-3">🗺️</span>
+                  <strong>Sitemap:</strong> Does `domain.com/sitemap.xml` exist
+                  and is it submitted?
+                </li>
+                <li class="flex items-center">
+                  <span class="text-xl mr-3">👻</span>
+                  <strong>Orphan Pages:</strong> Are there pages with no
+                  internal links pointing to them?
+                </li>
+                <li class="flex items-center">
+                  <span class="text-xl mr-3">📝</span>
+                  <strong>Meta Tags:</strong> Are title and description tags
+                  unique and optimized?
+                </li>
+              </ul>
+              <div
+                class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+              >
+                <h4 class="font-bold text-[#34A65F]">Essential Audit Tools</h4>
+                <p class="text-sm text-green-800 mt-2">
+                  Tools like <strong>SEO Site Checkup</strong>,
+                  <strong>Neil Patel’s SEO Analyzer</strong>, and
+                  <strong>Screaming Frog</strong> are invaluable for automating
+                  the process of finding these technical issues across hundreds
+                  of URLs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            Next Steps: Assignment & Readings
+          </h2>
+          <p class="mb-6 text-gray-600">
+            Theory is the first step. The real learning comes from applying
+            these concepts. This assignment reinforces your understanding by
+            analyzing a real-world example. The evaluation focuses on your
+            ability to identify issues and propose actionable improvements.
+          </p>
+          <h3 class="font-bold text-lg mb-2 text-center text-[#232628]">
+            Assignment Point Distribution
+          </h3>
+          <div class="chart-container h-64 md:h-80">
+            <canvas id="assignmentChart"></canvas>
+          </div>
+          <p class="mt-4 text-sm text-gray-500 text-center">
+            The assignment weighting emphasizes hands-on analysis of keywords
+            and page structure, as these are foundational skills for any SEO
+            practitioner.
+          </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold mb-4 text-[#232628]">
+            Your Learning Journey
+          </h2>
+          <p class="mb-6 text-gray-600">
+            Use peer review to sharpen your eye and prepare for the next steps
+            by exploring these essential resources.
+          </p>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold text-lg text-[#232628] flex items-center">
+                🤝 Peer Review
+              </h4>
+              <p class="text-gray-600 mt-1">
+                Swap audits with a peer. Provide feedback on keyword relevance,
+                page structure, and on-page SEO suggestions to see what you
+                might have missed.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-[#232628] flex items-center">
+                📚 Suggested Readings
+              </h4>
+              <ul class="mt-2 space-y-1 list-disc list-inside text-blue-600">
+                <li>
+                  <span class="text-gray-700">Google's SEO Starter Guide</span>
+                </li>
+                <li>
+                  <span class="text-gray-700"
+                    >"How Google SGE is Changing SEO" on Search Engine
+                    Land</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg text-[#232628] flex items-center">
+                🗓️ Prep for Week 3
+              </h4>
+              <p class="text-gray-600 mt-1">
+                Read about On-Page vs. Off-Page SEO and bring an example site
+                for a link-building strategy discussion.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="text-center mt-12 pt-8 border-t border-gray-200">
+        <p class="text-sm text-gray-500">
+          This infographic was generated to visualize the key concepts from the
+          Week 2 SEO Lecture.
+        </p>
+      </footer>
+    </main>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const currentPath = window.location.pathname.split("/").pop(); // Get filename
-        const navLinks = document.querySelectorAll(".navbar-link");
+      const FONT_COLOR = "#232628";
+      const BORDER_COLOR = "rgba(0, 0, 0, 0.1)";
 
-        navLinks.forEach((link) => {
-          const linkHref = link.getAttribute("href");
-          if (linkHref === currentPath) {
-            link.classList.add("active");
+      const wrapLabel = (label, maxWidth) => {
+        if (label.length <= maxWidth) {
+          return label;
+        }
+        const words = label.split(" ");
+        const lines = [];
+        let currentLine = "";
+        for (const word of words) {
+          if ((currentLine + word).length > maxWidth) {
+            lines.push(currentLine.trim());
+            currentLine = "";
           }
-        });
+          currentLine += word + " ";
+        }
+        lines.push(currentLine.trim());
+        return lines;
+      };
 
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
+      const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+          return label.join(" ");
+        } else {
+          return label;
+        }
+      };
+
+      const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              color: FONT_COLOR,
+              font: {
+                family: "'Inter', sans-serif",
+              },
+            },
+          },
+          tooltip: {
+            callbacks: {
+              title: tooltipTitleCallback,
+            },
+            bodyFont: {
+              family: "'Inter', sans-serif",
+            },
+            titleFont: {
+              family: "'Inter', sans-serif",
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: { color: FONT_COLOR },
+            grid: { color: BORDER_COLOR },
+          },
+          x: {
+            ticks: { color: FONT_COLOR },
+            grid: { color: "rgba(0, 0, 0, 0)" },
+          },
+        },
+      };
+
+      const donutChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              color: FONT_COLOR,
+              font: {
+                family: "'Inter', sans-serif",
+              },
+            },
+          },
+          tooltip: {
+            callbacks: {
+              title: tooltipTitleCallback,
+            },
+            bodyFont: {
+              family: "'Inter', sans-serif",
+            },
+            titleFont: {
+              family: "'Inter', sans-serif",
+            },
+          },
+        },
+        cutout: "60%",
+      };
+
+      const palette = {
+        blue: "#00A6FB",
+        red: "#DC493A",
+        yellow: "#FECD1A",
+        green: "#34A65F",
+        dark: "#232628",
+      };
+
+      new Chart(document.getElementById("intentChart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Informational",
+            "Navigational",
+            "Transactional",
+            "Commercial Investigation",
+          ],
+          datasets: [
+            {
+              label: "Search Intent Breakdown",
+              data: [65, 15, 10, 10],
+              backgroundColor: [
+                palette.blue,
+                palette.green,
+                palette.red,
+                palette.yellow,
+              ],
+              borderColor: "#ffffff",
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: donutChartOptions,
+      });
+
+      new Chart(document.getElementById("auditChart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Missing Alt Text",
+            "No HTTPS",
+            "Broken Links",
+            "Duplicate Content",
+            "Slow Page Speed",
+          ],
+          datasets: [
+            {
+              label: "Common Audit Issues",
+              data: [30, 15, 25, 10, 20],
+              backgroundColor: [
+                palette.blue,
+                palette.dark,
+                palette.red,
+                palette.yellow,
+                palette.green,
+              ],
+              borderColor: "#ffffff",
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: donutChartOptions,
+      });
+
+      new Chart(document.getElementById("assignmentChart"), {
+        type: "pie",
+        data: {
+          labels: [
+            ["Keyword", "Analysis (20)"],
+            ["Page Structure", "Audit (20)"],
+            ["Sitemap & URL", "Analysis (10)"],
+            ["SEO Improvement", "Proposal (20)"],
+            ["Clarity &", "Formatting (10)"],
+            ["On-Time", "Submission (10)"],
+          ],
+          datasets: [
+            {
+              label: "Points",
+              data: [20, 20, 10, 20, 10, 10],
+              backgroundColor: [
+                palette.blue,
+                palette.green,
+                palette.yellow,
+                palette.red,
+                "rgba(0, 166, 251, 0.5)",
+                "rgba(220, 73, 58, 0.5)",
+              ],
+              borderColor: "#ffffff",
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                color: FONT_COLOR,
+                font: {
+                  family: "'Inter', sans-serif",
+                },
+                generateLabels: function (chart) {
+                  const original =
+                    Chart.defaults.plugins.legend.labels.generateLabels;
+                  const labelsOriginal = original.call(this, chart);
+                  labelsOriginal.forEach((label) => {
+                    const dataset = chart.data.datasets[0];
+                    const currentLabel = chart.data.labels[label.index];
+                    if (Array.isArray(currentLabel)) {
+                      label.text = currentLabel.join(" ");
+                    }
+                  });
+                  return labelsOriginal;
+                },
+              },
+            },
+            tooltip: {
+              callbacks: {
+                title: tooltipTitleCallback,
+              },
+              bodyFont: {
+                family: "'Inter', sans-serif",
+              },
+              titleFont: {
+                family: "'Inter', sans-serif",
+              },
+            },
+          },
+        },
       });
     </script>
   </body>
